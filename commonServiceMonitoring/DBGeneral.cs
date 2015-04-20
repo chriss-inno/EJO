@@ -286,7 +286,7 @@ namespace commonServiceMonitoring
         public OracleConnection Oracle_connect()
         {
 
-            OracleConnection conn = new OracleConnection("Data Source=(DESCRIPTION =(ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.1.10)(PORT = 1521))(CONNECT_DATA =(SERVER = DEDICATED)(SERVICE_NAME = bankmlive)));User ID=fcdblive;Password=fcdblive;Unicode=True");
+            OracleConnection conn = new OracleConnection("Data Source=bankmlive;User ID=fcdblive;Password=fcdblive;Unicode=True");
             try
             {
                 conn.Open();

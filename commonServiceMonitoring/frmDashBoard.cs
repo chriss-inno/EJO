@@ -774,8 +774,8 @@ namespace commonServiceMonitoring
                     SWIFT sw = new SWIFT();
                     //timerSWIFTOTNONCU.Enabled = false; //Stop further time service until one operation is completed 
                     dbSwiftNonCust = dbg.MSSQL_SWIFT_Out_connect();
-                    sw.processOutgoingSwiftNonCustomer(sFolderSwiftNonCust, dFolderSwiftNonCust, dbSwiftNonCust); 
-                    //sw.processOutgoingSwiftNonCustomer("C:\\snocuout\\", "C:\\snocuout2\\", dbSwiftNonCust); 
+                    //sw.processOutgoingSwiftNonCustomer(sFolderSwiftNonCust, dFolderSwiftNonCust, dbSwiftNonCust); 
+                    sw.processOutgoingSwiftNonCustomer("C:\\snocuout\\", "C:\\snocuout2\\", dbSwiftNonCust); 
                     
 
                     //timerSWIFTOTNONCU.Enabled = true;   //Start again the timer to proces new incomming 

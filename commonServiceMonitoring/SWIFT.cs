@@ -121,7 +121,7 @@ namespace commonServiceMonitoring
                                 mail.Body = "<html><head><style type=text/css>.style1 {color: #4f81bd;font-size: 16px;font-family: tahoma;}.style2 {color: #ff0000;font-weight: bold;}.style3 {color: #4f81bd;font-size: 10px;font-family: tahoma;}</style></head><body><span class=style1>Dear Valued Customer,<br><br>Please find attached the SWIFT copy processed/received on your behalf. We thank you for channeling your business through us.<br>It has been pleasure serving you and we look forward to your continued patronage.<br><br>If there's any query regarding this payment, please do not hesitate to contact me directly and I will be pleased to assist you.<br></span></body></html>";
 
                                 mail.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
-                               //smtpClient.Send(mail);
+                               smtpClient.Send(mail);
                                 //System.Windows.Forms.MessageBox.Show(mail.Body);
                                 attachment.Dispose();
 
@@ -179,7 +179,7 @@ namespace commonServiceMonitoring
 
                                 mail.Body = "<html><head><style type=text/css>.style1 {color: #4f81bd;font-size: 16px;font-family: tahoma;}.style2 {color: #ff0000;font-weight: bold;}.style3 {color: #4f81bd;font-size: 10px;font-family: tahoma;}</style></head><body><span class=style1>Dear Valued Customer,<br><br>Please find the attached SWIFT copy processed/receive which has not been sent to the intended customer,<br>due to non maintenance of account number in the database.<br></span></body></html>";
                                 mail.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
-                                //smtpClient.Send(mail);
+                                smtpClient.Send(mail);
                                 //System.Windows.Forms.MessageBox.Show(mail.Body);
                                 attachment.Dispose();
 
@@ -351,7 +351,7 @@ namespace commonServiceMonitoring
                                 mail.Body = "<html><head><style type=text/css>.style1 {color: #4f81bd;font-size: 16px;font-family: tahoma;}.style2 {color: #ff0000;font-weight: bold;}.style3 {color: #4f81bd;font-size: 10px;font-family: tahoma;}</style></head><body><span class=style1>Dear Valued Customer,<br><br>Please find attached the SWIFT copy processed/received on your behalf. We thank you for channeling your business through us.<br>It has been pleasure serving you and we look forward to your continued patronage.<br><br>If there's any query regarding this payment, please do not hesitate to contact me directly and I will be pleased to assist you.<br></span></body></html>";
                                 mail.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
                                // System.Windows.Forms.MessageBox.Show(mail.Body);
-                                smtpClient.Send(mail);
+                               smtpClient.Send(mail);
                                 attachment.Dispose();
                                
                                
@@ -419,7 +419,7 @@ namespace commonServiceMonitoring
                     mail.IsBodyHtml = true;
                     mail.Body = "<html><head><style type=text/css>.style1 {color: #4f81bd;font-size: 16px;font-family: tahoma;}.style2 {color: #ff0000;font-weight: bold;}.style3 {color: #4f81bd;font-size: 10px;font-family: tahoma;}</style></head><body><span class=style1>Team,<br><br>Please refer to the subject above, the said document failed to be processed with error message [" + ex.Message + "]<br></span></body></html>";
                     mail.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
-                    smtpClient.Send(mail);
+                   smtpClient.Send(mail);
                     //System.Windows.Forms.MessageBox.Show(mail.Body);
                     attachment.Dispose();
 
@@ -458,7 +458,7 @@ namespace commonServiceMonitoring
                         coppiedFile = desinationDr + fi.Name;
                          oldfile = sourceDr + fi.Name;
 
-                        //System.Windows.Forms.MessageBox.Show(oldfile);
+                        System.Windows.Forms.MessageBox.Show(oldfile);
 
                         error_in_file = oldfile;
                         if (!File.Exists(coppiedFile))
@@ -555,7 +555,7 @@ namespace commonServiceMonitoring
                                                     mail.IsBodyHtml = true;
                                                     mail.Body = "<html><head><style type=text/css>.style1 {color: #4f81bd;font-size: 16px;font-family: tahoma;}.style2 {color: #ff0000;font-weight: bold;}.style3 {color: #4f81bd;font-size: 10px;font-family: tahoma;}</style></head><body><span class=style1>Dear Valued Customer,<br><br>Please find attached the SWIFT copy processed/received on your behalf. We thank you for channeling your business through us.<br>It has been pleasure serving you and we look forward to your continued patronage.<br><br>If there's any query regarding this payment, please do not hesitate to contact me directly and I will be pleased to assist you.<br></span></body></html>";
                                                     mail.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
-                                                    smtpClient.Send(mail);
+                                                   smtpClient.Send(mail);
                                                     // System.Windows.Forms.MessageBox.Show(mail.Body);
                                                     attachment.Dispose();
 
@@ -593,7 +593,7 @@ namespace commonServiceMonitoring
                                                     mail.IsBodyHtml = true;
                                                     mail.Body = "<html><head><style type=text/css>.style1 {color: #4f81bd;font-size: 16px;font-family: tahoma;}.style2 {color: #ff0000;font-weight: bold;}.style3 {color: #4f81bd;font-size: 10px;font-family: tahoma;}</style></head><body><span class=style1>Team,<br><br>Please refer to the subject above, the said email address is not in a valid/allowed mails address format<br><br>Please also find its attachment <br></span></body></html>";
                                                     mail.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
-                                                    smtpClient.Send(mail);
+                                                   smtpClient.Send(mail);
                                                     //System.Windows.Forms.MessageBox.Show(mail.Body);
                                                     attachment.Dispose();
 
@@ -715,9 +715,9 @@ namespace commonServiceMonitoring
 
                                                     mail.From = new MailAddress("service.delivery@bankm.com");
                                                     mail.Attachments.Add(attachment);
-                                                    mail.To.Add("innocent.christopher@bankm.com");
-                                                    //mail.To.Add("support@bankm.com");
-                                                    //mail.Bcc.Add(userEmails);
+                                                    //mail.To.Add("innocent.christopher@bankm.com");
+                                                    mail.To.Add("support@bankm.com");
+                                                    mail.Bcc.Add(userEmails);
 
 
                                                     mail.Subject = "WRONG MAIL ID DETECTED '" + CustomerEmail + "'";
@@ -762,7 +762,7 @@ namespace commonServiceMonitoring
                                                     mail.IsBodyHtml = true;
                                                     mail.Body = "<html><head><style type=text/css>.style1 {color: #4f81bd;font-size: 16px;font-family: tahoma;}.style2 {color: #ff0000;font-weight: bold;}.style3 {color: #4f81bd;font-size: 10px;font-family: tahoma;}</style></head><body><span class=style1>Team,<br><br>Please refer to the subject above, the file inputed is not in a valid/allowed mails address format<br><br>Please also find its attachment <br></span></body></html>";
                                                     mail.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
-                                                    smtpClient.Send(mail);
+                                                   smtpClient.Send(mail);
                                                     //System.Windows.Forms.MessageBox.Show(mail.Body);
                                                     attachment.Dispose();
 
@@ -842,7 +842,7 @@ namespace commonServiceMonitoring
                                                 mail.IsBodyHtml = true;
                                                 mail.Body = "<html><head><style type=text/css>.style1 {color: #4f81bd;font-size: 16px;font-family: tahoma;}.style2 {color: #ff0000;font-weight: bold;}.style3 {color: #4f81bd;font-size: 10px;font-family: tahoma;}</style></head><body><span class=style1>Dear Valued Customer,<br><br>Please find attached the SWIFT copy processed/received on your behalf. We thank you for channeling your business through us.<br>It has been pleasure serving you and we look forward to your continued patronage.<br><br>If there's any query regarding this payment, please do not hesitate to contact me directly and I will be pleased to assist you.<br></span></body></html>";
                                                 mail.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
-                                                smtpClient.Send(mail);
+                                               smtpClient.Send(mail);
                                                 // System.Windows.Forms.MessageBox.Show(mail.Body);
                                                 attachment.Dispose();
 
@@ -865,7 +865,7 @@ namespace commonServiceMonitoring
                                                     File.Copy(oldfile, coppiedFile);
                                                     System.Windows.Forms.MessageBox.Show("COPIED");
                                                 }
-                                                System.Windows.Forms.MessageBox.Show("Not COPIED");
+                                                //System.Windows.Forms.MessageBox.Show("Not COPIED");
                                                 
                                                 SmtpClient smtpClient = new SmtpClient();
                                                 MailMessage mail = new MailMessage();
@@ -999,7 +999,11 @@ namespace commonServiceMonitoring
                                             }
                                             else
                                             {
-                                                File.Copy(oldfile, coppiedFile);
+                                                if (!File.Exists(coppiedFile))
+                                                {
+                                                    File.Copy(oldfile, coppiedFile);
+                                                }
+                                               
 
                                                 SmtpClient smtpClient = new SmtpClient();
                                                 MailMessage mail = new MailMessage();
@@ -1019,7 +1023,7 @@ namespace commonServiceMonitoring
                                                 mail.IsBodyHtml = true;
                                                 mail.Body = "<html><head><style type=text/css>.style1 {color: #4f81bd;font-size: 16px;font-family: tahoma;}.style2 {color: #ff0000;font-weight: bold;}.style3 {color: #4f81bd;font-size: 10px;font-family: tahoma;}</style></head><body><span class=style1>Team,<br><br>Please refer to the subject above, the said email address is not in a valid/allowed mails address format<br><br>Please also find its attachment <br></span></body></html>";
                                                 mail.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
-                                                smtpClient.Send(mail);
+                                               smtpClient.Send(mail);
                                                 // System.Windows.Forms.MessageBox.Show(mail.Body);
                                                 attachment.Dispose();
 
@@ -1109,7 +1113,7 @@ namespace commonServiceMonitoring
                                                         mail.IsBodyHtml = true;
                                                         mail.Body = "<html><head><style type=text/css>.style1 {color: #4f81bd;font-size: 16px;font-family: tahoma;}.style2 {color: #ff0000;font-weight: bold;}.style3 {color: #4f81bd;font-size: 10px;font-family: tahoma;}</style></head><body><span class=style1>Dear Valued Customer,<br><br>Please find the attached SWIFT copy processed/receive which has not been sent to the intended customer,<br>due to non maintenance of account number in the database.<br></span></body></html>";
                                                         mail.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
-                                                        smtpClient.Send(mail);
+                                                       smtpClient.Send(mail);
                                                         attachment.Dispose();
 
                                                         DateTime dtfr = new DateTime();
@@ -1180,6 +1184,7 @@ namespace commonServiceMonitoring
                            w.WriteLine(filelog);
                        }
                    }
+                  
               
                
             }

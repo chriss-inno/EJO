@@ -492,3 +492,4 @@ C:\Users\Administrator\Desktop\BankApps 14-04-2015\commonServiceMonitoring\obj\x
 C:\Users\Administrator\Desktop\BankApps 14-04-2015\commonServiceMonitoring\obj\x86\Debug\commonServiceMonitoring.csproj.GenerateResource.Cache
 C:\Users\Administrator\Desktop\BankApps 14-04-2015\commonServiceMonitoring\obj\x86\Debug\Services Monitoring Panel.exe
 C:\Users\Administrator\Desktop\BankApps 14-04-2015\commonServiceMonitoring\obj\x86\Debug\Services Monitoring Panel.pdb
+C:\Users\Administrator\Desktop\BankApps 14-04-2015\commonServiceMonitoring\obj\x86\Debug\commonServiceMonitoring.csprojResolveAssemblyReference.cache
