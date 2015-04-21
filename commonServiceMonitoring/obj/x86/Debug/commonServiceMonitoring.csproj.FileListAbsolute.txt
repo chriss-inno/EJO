@@ -493,3 +493,21 @@ C:\Users\Administrator\Desktop\BankApps 14-04-2015\commonServiceMonitoring\obj\x
 C:\Users\Administrator\Desktop\BankApps 14-04-2015\commonServiceMonitoring\obj\x86\Debug\Services Monitoring Panel.exe
 C:\Users\Administrator\Desktop\BankApps 14-04-2015\commonServiceMonitoring\obj\x86\Debug\Services Monitoring Panel.pdb
 C:\Users\Administrator\Desktop\BankApps 14-04-2015\commonServiceMonitoring\obj\x86\Debug\commonServiceMonitoring.csprojResolveAssemblyReference.cache
+C:\BankApps 14-04-2015\commonServiceMonitoring\bin\Debug\Services Monitoring Panel.exe
+C:\BankApps 14-04-2015\commonServiceMonitoring\bin\Debug\Services Monitoring Panel.pdb
+C:\BankApps 14-04-2015\commonServiceMonitoring\bin\Debug\Microsoft.CSharp.dll
+C:\BankApps 14-04-2015\commonServiceMonitoring\bin\Debug\System.Data.DataSetExtensions.dll
+C:\BankApps 14-04-2015\commonServiceMonitoring\bin\Debug\System.Data.dll
+C:\BankApps 14-04-2015\commonServiceMonitoring\bin\Debug\System.Deployment.dll
+C:\BankApps 14-04-2015\commonServiceMonitoring\bin\Debug\System.dll
+C:\BankApps 14-04-2015\commonServiceMonitoring\bin\Debug\System.Drawing.dll
+C:\BankApps 14-04-2015\commonServiceMonitoring\bin\Debug\System.Windows.Forms.DataVisualization.dll
+C:\BankApps 14-04-2015\commonServiceMonitoring\bin\Debug\System.Windows.Forms.dll
+C:\BankApps 14-04-2015\commonServiceMonitoring\bin\Debug\System.Xml.dll
+C:\BankApps 14-04-2015\commonServiceMonitoring\bin\Debug\System.Xml.Linq.dll
+C:\BankApps 14-04-2015\commonServiceMonitoring\obj\x86\Debug\commonServiceMonitoring.frmContainer.resources
+C:\BankApps 14-04-2015\commonServiceMonitoring\obj\x86\Debug\commonServiceMonitoring.frmDashBoard.resources
+C:\BankApps 14-04-2015\commonServiceMonitoring\obj\x86\Debug\commonServiceMonitoring.Properties.Resources.resources
+C:\BankApps 14-04-2015\commonServiceMonitoring\obj\x86\Debug\commonServiceMonitoring.csproj.GenerateResource.Cache
+C:\BankApps 14-04-2015\commonServiceMonitoring\obj\x86\Debug\Services Monitoring Panel.exe
+C:\BankApps 14-04-2015\commonServiceMonitoring\obj\x86\Debug\Services Monitoring Panel.pdb

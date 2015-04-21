@@ -92,7 +92,7 @@ namespace commonServiceMonitoring
                 dt = DateTime.Now;
 
                 sourceFolder = "\\\\192.168.110.192\\d$\\BANKM\\Download\\";
-                destinationFolder = "S:\\FCDB\\" + dt.Year + "\\" + dt.ToString("MMMM") + "\\" + dt.Day + "\\";
+                destinationFolder = "Z:\\FCDB\\" + dt.Year + "\\" + dt.ToString("MMMM") + "\\" + dt.Day + "\\";
 
                 if (!Directory.Exists(destinationFolder))
                 {
@@ -384,8 +384,8 @@ namespace commonServiceMonitoring
                 //timerSWIFTINCO.Enabled = false; //Stop further time service until one operation is completed 
                 
                
-               // sw.processIncomingSwift(sFoldeSwiftr, dFolderSwift, dbSwift);
-                sw.processIncomingSwift("C:\\snocuout\\", "C:\\snocuout2\\", dbSwift);
+                sw.processIncomingSwift(sFoldeSwiftr, dFolderSwift, dbSwift);
+               //sw.processIncomingSwift("C:\\snocuout\\", "C:\\snocuout2\\", dbSwift);
                
                
                // timerSWIFTINCO.Enabled = true;   //Start again the timer to proces new incomming 
@@ -774,8 +774,8 @@ namespace commonServiceMonitoring
                     SWIFT sw = new SWIFT();
                     //timerSWIFTOTNONCU.Enabled = false; //Stop further time service until one operation is completed 
                     dbSwiftNonCust = dbg.MSSQL_SWIFT_Out_connect();
-                    //sw.processOutgoingSwiftNonCustomer(sFolderSwiftNonCust, dFolderSwiftNonCust, dbSwiftNonCust); 
-                    sw.processOutgoingSwiftNonCustomer("C:\\snocuout\\", "C:\\snocuout2\\", dbSwiftNonCust); 
+                    sw.processOutgoingSwiftNonCustomer(sFolderSwiftNonCust, dFolderSwiftNonCust, dbSwiftNonCust); 
+                    //sw.processOutgoingSwiftNonCustomer("C:\\snocuout\\", "C:\\snocuout2\\", dbSwiftNonCust); 
                     
 
                     //timerSWIFTOTNONCU.Enabled = true;   //Start again the timer to proces new incomming 
@@ -1512,7 +1512,7 @@ namespace commonServiceMonitoring
                 dt = DateTime.Now;
 
                 sourceFolder = "\\\\192.168.110.192\\d$\\BANKM\\Download\\";
-                destinationFolder = "S:\\FCDB\\" + dt.Year + "\\" + dt.ToString("MMMM") + "\\" + dt.Day + "\\";
+                destinationFolder = "Z:\\FCDB\\" + dt.Year + "\\" + dt.ToString("MMMM") + "\\" + dt.Day + "\\";
 
                 if (!Directory.Exists(destinationFolder))
                 {

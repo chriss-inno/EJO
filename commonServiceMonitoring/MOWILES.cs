@@ -46,7 +46,7 @@ namespace commonServiceMonitoring
                     
 
 
-                    SqlConnection mDb= new SqlConnection("Data Source=AUTOMAILSRV\\SQLEXPRESS;Initial Catalog=TXNFUNDSTRANSFER;Integrated Security=True");
+                    SqlConnection mDb= new SqlConnection("Data Source=BANKMPORTAL\\SQLEXPRESS;Initial Catalog=TXNFUNDSTRANSFER;Integrated Security=True");
                     SqlCommand custCMD =mDb.CreateCommand();
                     mDb.Open();
                     custCMD.CommandText = "select * from TXNFUNDSTRANSFER WHERE IDFCATREF = '" + uPloadRef + "'";
@@ -135,7 +135,7 @@ namespace commonServiceMonitoring
 
 
                         //System.Windows.Forms.MessageBox.Show(mail.Body);
-                        SqlConnection myconnection = new SqlConnection("Data Source=AUTOMAILSRV\\SQLEXPRESS;Initial Catalog=TXNFUNDSTRANSFER;Integrated Security=True");
+                        SqlConnection myconnection = new SqlConnection("Data Source=BANKMPORTAL\\SQLEXPRESS;Initial Catalog=TXNFUNDSTRANSFER;Integrated Security=True");
                         myconnection.Open();
                         SqlCommand mycommand =myconnection.CreateCommand();
                         mycommand.CommandText="insert into TXNFUNDSTRANSFER([IDFCATREF]) values ('" + dr["IDFCATREF"].ToString() + "')";
@@ -173,7 +173,7 @@ namespace commonServiceMonitoring
                 mail.From = new MailAddress("service.delivery@bankm.com");
 
                 mail.To.Add("innocent.christopher@bankm.com");
-                //mail.To.Add("support@bankm.com");
+                mail.To.Add("adolph.mwakalinga@bankm.com");
 
                 mail.Subject = "CONNECTION ERROR NOTIFICATION IN Money Wireless Failure";
                 mail.IsBodyHtml = true;
@@ -207,7 +207,7 @@ namespace commonServiceMonitoring
                 while (dr.Read())
                 {
                     uPloadRef = dr["IDFCATREF"].ToString();
-                    SqlConnection mDb = new SqlConnection("Data Source=AUTOMAILSRV\\SQLEXPRESS;Initial Catalog=TXNFUNDSTRANSFER;Integrated Security=True");
+                    SqlConnection mDb = new SqlConnection("Data Source=BANKMPORTAL\\SQLEXPRESS;Initial Catalog=TXNFUNDSTRANSFER;Integrated Security=True");
                     mDb.Open();
                     SqlCommand mCmd = mDb.CreateCommand();
 
@@ -297,7 +297,7 @@ namespace commonServiceMonitoring
                         mail.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
                         SmtpServer.Send(mail);
 
-                        SqlConnection cn= new SqlConnection("Data Source=AUTOMAILSRV\\SQLEXPRESS;Initial Catalog=TXNFUNDSTRANSFER;Integrated Security=True");
+                        SqlConnection cn= new SqlConnection("Data Source=BANKMPORTAL\\SQLEXPRESS;Initial Catalog=TXNFUNDSTRANSFER;Integrated Security=True");
                         SqlCommand ocmd2 = cn.CreateCommand();
                         cn.Open();
                         ocmd2.CommandText = "insert into TXNFUNDSTRANSFER([IDFCATREF]) values ('" + dr["IDFCATREF"].ToString() + "')";
@@ -332,7 +332,7 @@ namespace commonServiceMonitoring
                 mail.From = new MailAddress("service.delivery@bankm.com");
 
                 mail.To.Add("innocent.christopher@bankm.com");
-                //mail.To.Add("support@bankm.com");
+                mail.To.Add("adolph.mwakalinga@bankm.com");
 
                 mail.Subject = "ERROR NOTIFICATION IN MONEY WILESS SUCCESS";
                 mail.IsBodyHtml = true;

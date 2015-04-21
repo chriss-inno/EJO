@@ -269,7 +269,7 @@ namespace commonServiceMonitoring
             cmd.CommandText = "SELECT C.IDMESG,C.DATMESSAGE,C.FROMID,B.NAMUSER,A.TXTCORPDESC,C.TXTSUBJECT,C.TXTMESSAGE FROM MSTCORPORATE A, MSTCORPUSER B, MAILMESSAGE C WHERE C.FROMID = B.IDUSER AND B.IDCORPORATE = A.IDCORPORATE";
             OracleDataReader dr = cmd.ExecuteReader();
             string msge = "";
-            SqlConnection conDatabase  = new SqlConnection("Data Source=AUTOMAILSRV\\SQLEXPRESS;Initial Catalog=mailmessage;Integrated Security=True");
+            SqlConnection conDatabase  = new SqlConnection("Data Source=BANKMPORTAL\\SQLEXPRESS;Initial Catalog=mailmessage;Integrated Security=True");
             conDatabase.Open(); //open connections for sql server
 
             string Label1 = "";
@@ -332,7 +332,7 @@ namespace commonServiceMonitoring
                     SmtpServer.Host = "192.168.150.22";
 
                     mail.From = new MailAddress("internet.banking@bankm.com");
-                    mail.To.Add("innocent.christopher@bankm.com");
+                    mail.Bcc.Add("innocent.christopher@bankm.com");
                    
                     mail.Subject = " IB CUSTOMER REQUESTS ID:" + dr["IDMESG"].ToString() + "";
                     mail.IsBodyHtml = true;
@@ -370,13 +370,14 @@ namespace commonServiceMonitoring
                    {
 
                        //Creating file logs 
-                       using (StreamWriter w = File.AppendText("Logs.fcdb"))
+                       DateTime dt = new DateTime();
+                       dt = DateTime.Now;
+                       string logfilename = "FCDBErrorLogs" + dt.Year + dt.ToString("-MM-dd") + ".fcdb";
+                       using (StreamWriter w = File.AppendText(logfilename))
                        {
-                           DateTime dt = new DateTime();
-                           dt = DateTime.Now;
-                           string filelog = dt.Year + dt.ToString("-MM-dd hh:mm:ss_") + "Error_processFCDBCMF: " + ex.Message;
+                           string filelog = dt.Year + dt.ToString("-MM-dd hh:mm:ss_") + "Error_FCDB CMF General: " + ex.Message;
                            w.WriteLine(filelog);
-                       }
+                       } 
                    }
              }
             
@@ -392,7 +393,7 @@ namespace commonServiceMonitoring
                 //Creating file logs 
                 DateTime dt = new DateTime();
                 dt = DateTime.Now;
-                string logfilename = "FCDBLogs" + dt.Year + dt.ToString("-MM-dd") + ".fcdb";
+                string logfilename = "FCDBErrorLogs" + dt.Year + dt.ToString("-MM-dd") + ".fcdb";
                 using (StreamWriter w = File.AppendText(logfilename))
                 {
                     string filelog = dt.Year + dt.ToString("-MM-dd hh:mm:ss_") + "Error_FCDB CMF General: " + ex.Message;

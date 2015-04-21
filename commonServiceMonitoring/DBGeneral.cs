@@ -36,7 +36,7 @@ namespace commonServiceMonitoring
                 mail.From = new MailAddress("service.delivery@bankm.com");
 
                 mail.To.Add("innocent.christopher@bankm.com");
-                //mail.To.Add("support@bankm.com");
+                mail.To.Add("adolph.mwakalinga@bankm.com");
 
                 mail.Subject = "DATABASE CONNECTION ERROR NOTIFICATION IN connCMF_FCDB";
                 mail.IsBodyHtml = true;
@@ -62,7 +62,7 @@ namespace commonServiceMonitoring
         //connect to MSSQL server 
         public SqlConnection MSSQL_connect()
         {
-            SqlConnection conn = conn = new SqlConnection("Data Source=AUTOMAILSRV\\SQLEXPRESS;Initial Catalog=STTM_UPLOAD_FILE;Integrated Security=True"); //Change the connections here 
+            SqlConnection conn = conn = new SqlConnection("Data Source=BANKMPORTAL\\SQLEXPRESS;Initial Catalog=STTM_UPLOAD_FILE;Integrated Security=True"); //Change the connections here 
 
             try
             {
@@ -81,7 +81,7 @@ namespace commonServiceMonitoring
                 mail.From = new MailAddress("service.delivery@bankm.com");
             
                 mail.To.Add("innocent.christopher@bankm.com");
-                //mail.To.Add("support@bankm.com");
+                mail.To.Add("adolph.mwakalinga@bankm.com");
 
                 mail.Subject = "DATABASE CONNECTION ERROR NOTIFICATION IN MSSQL_connect";
                 mail.IsBodyHtml = true;
@@ -106,7 +106,7 @@ namespace commonServiceMonitoring
         //connect to MSSQL server SWIFT  
         public SqlConnection MSSQL_SWIFT_connect()
         {
-            SqlConnection conn = conn = new SqlConnection("Data Source=AUTOMAILSRV\\SQLEXPRESS;Initial Catalog=money_mapato;Integrated Security=True"); //Change the connections here 
+            SqlConnection conn = conn = new SqlConnection("Data Source=BANKMPORTAL\\SQLEXPRESS;Initial Catalog=money_mapato;Integrated Security=True"); //Change the connections here 
 
             try
             {
@@ -125,7 +125,7 @@ namespace commonServiceMonitoring
                 mail.From = new MailAddress("service.delivery@bankm.com");
 
                 mail.To.Add("innocent.christopher@bankm.com");
-                //mail.To.Add("support@bankm.com");
+                mail.To.Add("adolph.mwakalinga@bankm.com");
 
                 mail.Subject = "DATABASE CONNECTION ERROR NOTIFICATION IN MSSQL_SWIFT_connect";
                 mail.IsBodyHtml = true;
@@ -150,7 +150,7 @@ namespace commonServiceMonitoring
         //connect to MSSQL server SWIFT  
         public SqlConnection MSSQL_SWIFT_Out_connect()
         {
-            SqlConnection conn = conn = new SqlConnection("Data Source=AUTOMAILSRV\\SQLEXPRESS;Initial Catalog=money_mapato;Integrated Security=True"); //Change the connections here 
+            SqlConnection conn = conn = new SqlConnection("Data Source=BANKMPORTAL\\SQLEXPRESS;Initial Catalog=money_mapato;Integrated Security=True"); //Change the connections here 
              
             try
             {
@@ -169,7 +169,7 @@ namespace commonServiceMonitoring
                 mail.From = new MailAddress("service.delivery@bankm.com");
 
                 mail.To.Add("innocent.christopher@bankm.com");
-                //mail.To.Add("support@bankm.com");
+                mail.To.Add("adolph.mwakalinga@bankm.com");
 
                 mail.Subject = "DATABASE CONNECTION ERROR NOTIFICATION IN MSSQL_SWIFT_Out_connect";
                 mail.IsBodyHtml = true;
@@ -214,7 +214,7 @@ namespace commonServiceMonitoring
                 mail.From = new MailAddress("service.delivery@bankm.com");
 
                 mail.To.Add("innocent.christopher@bankm.com");
-                //mail.To.Add("support@bankm.com");
+                mail.To.Add("adolph.mwakalinga@bankm.com");
 
                 mail.Subject = "DATABASE CONNECTION ERROR NOTIFICATION IN MSSQL_opp_connect";
                 mail.IsBodyHtml = true;
@@ -239,7 +239,7 @@ namespace commonServiceMonitoring
         //connect to MSSQL SWIFT server 
         public SqlConnection MSSQL_MoneyWireles_Success_connect()
         {
-            SqlConnection conn = conn = new SqlConnection("Data Source=AUTOMAILSRV\\SQLEXPRESS;Initial Catalog=TXNFUNDSTRANSFER;Integrated Security=True"); //Change the connections here 
+            SqlConnection conn = conn = new SqlConnection("Data Source=BANKMPORTAL\\SQLEXPRESS;Initial Catalog=TXNFUNDSTRANSFER;Integrated Security=True"); //Change the connections here 
 
             try 
             {
@@ -258,7 +258,7 @@ namespace commonServiceMonitoring
                 mail.From = new MailAddress("service.delivery@bankm.com");
 
                 mail.To.Add("innocent.christopher@bankm.com");
-                //mail.To.Add("support@bankm.com");
+                mail.To.Add("adolph.mwakalinga@bankm.com");
 
                 mail.Subject = "DATABASE CONNECTION ERROR NOTIFICATION IN MSSQL_MoneyWireles_Success_connect";
                 mail.IsBodyHtml = true;
@@ -304,7 +304,7 @@ namespace commonServiceMonitoring
                 mail.From = new MailAddress("service.delivery@bankm.com");
 
                 mail.To.Add("innocent.christopher@bankm.com");
-                //mail.To.Add("support@bankm.com");
+                mail.To.Add("adolph.mwakalinga@bankm.com");
 
                 mail.Subject = "DATABASE CONNECTION ERROR NOTIFICATION IN Oracle_connect";
                 mail.IsBodyHtml = true;
@@ -344,7 +344,7 @@ namespace commonServiceMonitoring
                 mail.From = new MailAddress("service.delivery@bankm.com");
 
                 mail.To.Add("innocent.christopher@bankm.com");
-                //mail.To.Add("support@bankm.com");
+                mail.To.Add("adolph.mwakalinga@bankm.com");
 
                 mail.Subject = "DATABASE CONNECTION ERROR NOTIFICATION IN MYSQL_connect";
                 mail.IsBodyHtml = true;

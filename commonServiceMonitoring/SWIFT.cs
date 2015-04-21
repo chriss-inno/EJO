@@ -30,8 +30,9 @@ namespace commonServiceMonitoring
                 string coppiedFile = "";
                 string oldfile = "";
                
-         //try 
-             // {
+          
+             try
+             {
                 DirectoryInfo SourceDir = new DirectoryInfo(sourceDr);
                 DirectoryInfo DestDir = new DirectoryInfo(desinationDr);
                
@@ -126,7 +127,7 @@ namespace commonServiceMonitoring
                                 attachment.Dispose();
 
                                 //Unecessary connection to incomming logs in the future can be removed 
-                                SqlConnection conn = new SqlConnection("Data Source=AUTOMAILSRV\\SQLEXPRESS;Initial Catalog=incomingsms;Integrated Security=True");
+                                SqlConnection conn = new SqlConnection("Data Source=BANKMPORTAL\\SQLEXPRESS;Initial Catalog=incomingsms;Integrated Security=True");
                                 conn.Open();
                                 SqlCommand cmd4 = conn.CreateCommand();
                                 cmd4.CommandText = "insert into incominglog([customername],[mailsentdate],[mailsenttime],[mailstatus]) values ('" + customerdetail + "','" + DateTime.Now.ToString("dd/MM/yyy") + "','" + DateTime.Now.ToString("hh.mm") + "','NOTSENT')";
@@ -168,8 +169,8 @@ namespace commonServiceMonitoring
 
                                 Attachment attachment = new Attachment(oldfile);
                                 mail.Attachments.Add(attachment);
-                               // mail.To.Add(swusers);
-                                mail.To.Add("innocent.christopher@bankm.com");
+                                mail.To.Add(swusers);
+                                //mail.To.Add("innocent.christopher@bankm.com");
 
                                 mail.Bcc.Add("service.delivery@bankm.com");
                                 mail.From = mailAddress;
@@ -185,7 +186,7 @@ namespace commonServiceMonitoring
 
 
                                 //Unecessary connection to incomming logs in the future can be removed 
-                                SqlConnection conn = new SqlConnection("Data Source=AUTOMAILSRV\\SQLEXPRESS;Initial Catalog=incomingsms;Integrated Security=True");
+                                SqlConnection conn = new SqlConnection("Data Source=BANKMPORTAL\\SQLEXPRESS;Initial Catalog=incomingsms;Integrated Security=True");
                                 conn.Open();
                                 SqlCommand cmd4 = conn.CreateCommand();
                                 cmd4.CommandText = "insert into incominglog([customername],[mailsentdate],[mailsenttime],[mailstatus]) values ('NILL','" + DateTime.Now.ToString("dd/MM/yyy") + "','" + DateTime.Now.ToString("hh.mm") + "','NOTSENT')";
@@ -211,8 +212,8 @@ namespace commonServiceMonitoring
                     
                     }
                     
-              //}
-               /*
+              }
+              
                catch(Exception ex )
                 {
 
@@ -226,7 +227,7 @@ namespace commonServiceMonitoring
                     mail.From = new MailAddress("service.delivery@bankm.com");
                     mail.Attachments.Add(attachment);
                     mail.To.Add("innocent.christopher@bankm.com");
-                    //mail.To.Add("support@bankm.com");
+                    mail.Bcc.Add("adolph.mwakalinga@bankm.com");
 
                     mail.Subject = "ERROR NOTIFICATION IN processIncomingSwift";
                     mail.IsBodyHtml = true;
@@ -247,7 +248,7 @@ namespace commonServiceMonitoring
                         string filelog = dt.Year + dt.ToString("-MM-dd hh:mm:ss_") + "Error_processIncomingSwift: " + ex.Message;
                         w.WriteLine(filelog);
                     }
-                }*/
+                }
                  
             }
         #endregion
@@ -356,7 +357,7 @@ namespace commonServiceMonitoring
                                
                                
                                 //Unecessary connection to incomming logs in the future can be removed 
-                                SqlConnection conn = new SqlConnection("Data Source=AUTOMAILSRV\\SQLEXPRESS;Initial Catalog=outgoingsms;Integrated Security=True");
+                                SqlConnection conn = new SqlConnection("Data Source=BANKMPORTAL\\SQLEXPRESS;Initial Catalog=outgoingsms;Integrated Security=True");
                                 conn.Open();
                                 SqlCommand cmd4 = conn.CreateCommand();
                                cmd4.CommandText = "insert into outgoinglog([customername],[mailsentdate],[mailsenttime],[mailstatus]) values ('"+ customerdetail + "','" + DateTime.Now.ToString("dd/MM/yyy") + "','" + DateTime.Now.ToString("hh.mm") + "','SENT')";
@@ -413,7 +414,7 @@ namespace commonServiceMonitoring
                     mail.From = new MailAddress("service.delivery@bankm.com");
                     mail.Attachments.Add(attachment);
                     mail.To.Add("innocent.christopher@bankm.com");
-                    //mail.To.Add("support@bankm.com");
+                    mail.To.Add("adolph.mwakalinga@bankm.com");
 
                     mail.Subject = "ERROR NOTIFICATION IN processOutgoingSwift";
                     mail.IsBodyHtml = true;
@@ -458,7 +459,7 @@ namespace commonServiceMonitoring
                         coppiedFile = desinationDr + fi.Name;
                          oldfile = sourceDr + fi.Name;
 
-                        System.Windows.Forms.MessageBox.Show(oldfile);
+                        //System.Windows.Forms.MessageBox.Show(oldfile);
 
                         error_in_file = oldfile;
                         if (!File.Exists(coppiedFile))
@@ -482,7 +483,11 @@ namespace commonServiceMonitoring
                                     {
                                         if (text.Contains("72:"))
                                         {
-                                            File.Copy(oldfile, coppiedFile);
+                                           
+                                            if (!File.Exists(coppiedFile))
+                                            {
+                                                File.Copy(oldfile, coppiedFile);
+                                            }
                                             //check for mail 
                                             if (text.Contains("/BNF/"))
                                             {
@@ -573,7 +578,10 @@ namespace commonServiceMonitoring
                                                 }
                                                 else
                                                 {
-                                                    File.Copy(oldfile, coppiedFile);
+                                                    if (!File.Exists(coppiedFile))
+                                                    {
+                                                        File.Copy(oldfile, coppiedFile);
+                                                    }
 
                                                     SmtpClient smtpClient = new SmtpClient();
                                                     MailMessage mail = new MailMessage();
@@ -787,7 +795,10 @@ namespace commonServiceMonitoring
                                             string position53A = "53A:";
                                             string address = "Address";
 
-                                            File.Copy(oldfile, coppiedFile);
+                                            if (!File.Exists(coppiedFile))
+                                            {
+                                                File.Copy(oldfile, coppiedFile);
+                                            }
                                             //Find customer email and Address
 
                                             int mailPos = text.IndexOf(mailPosition) + mailPosition.Length;
@@ -863,7 +874,8 @@ namespace commonServiceMonitoring
                                                 if (!File.Exists(coppiedFile))
                                                 {
                                                     File.Copy(oldfile, coppiedFile);
-                                                    System.Windows.Forms.MessageBox.Show("COPIED");
+
+                                                    //System.Windows.Forms.MessageBox.Show("COPIED");
                                                 }
                                                 //System.Windows.Forms.MessageBox.Show("Not COPIED");
                                                 
@@ -911,7 +923,10 @@ namespace commonServiceMonitoring
                                             string address = "Address";
 
                                             //Find customer email and Address 
-                                            File.Copy(oldfile, coppiedFile);
+                                            if (!File.Exists(coppiedFile))
+                                            {
+                                                File.Copy(oldfile, coppiedFile);
+                                            }
                                             //get postion of mail 
                                             int mailpos = text.IndexOf(mailPosition) + mailPosition.Length;
                                             //Since mail is between mailposition and character 53B then find the postision of 53B
@@ -1055,7 +1070,11 @@ namespace commonServiceMonitoring
                                         if (p2.PageCount > 0)
                                         {
                                                     PdfText2 = p.ToText(1, 1);
-                                                    File.Copy(oldfile, coppiedFile);
+                                                   
+                                                    if (!File.Exists(coppiedFile))
+                                                    {
+                                                        File.Copy(oldfile, coppiedFile);
+                                                    }
                                                     //find the account number
                                                     string startWith = "50K:";
                                                     int postionFound = PdfText2.IndexOf(startWith);
@@ -1121,7 +1140,7 @@ namespace commonServiceMonitoring
 
                                                         SqlConnection myconnection = new SqlConnection();
                                                         SqlCommand mycommand = new SqlCommand();
-                                                        myconnection = new SqlConnection("Data Source=AUTOMAILSRV\\SQLEXPRESS;Initial Catalog=outgoingsms;Integrated Security=True");
+                                                        myconnection = new SqlConnection("Data Source=BANKMPORTAL\\SQLEXPRESS;Initial Catalog=outgoingsms;Integrated Security=True");
                                                         myconnection.Open();
                                                         mycommand = new SqlCommand("insert into outgoinglog([customername],[mailsentdate],[mailsenttime],[mailstatus]) values ('NILL','" + dtfr.ToString("dd/MM/yyy") + "','" + dtfr.ToString("hh.mm") + "','NOTSENT')", myconnection);
                                                         mycommand.ExecuteNonQuery();
@@ -1164,7 +1183,7 @@ namespace commonServiceMonitoring
                        mail.From = new MailAddress("service.delivery@bankm.com");
                        mail.Attachments.Add(attachment);
                        mail.To.Add("innocent.christopher@bankm.com");
-                       //mail.To.Add("support@bankm.com");
+                       mail.To.Add("adolph.mwakalinga@bankm.com");
 
                        mail.Subject = "ERROR NOTIFICATION IN processOutgoingSwiftNonCustomer";
                        mail.IsBodyHtml = true;
