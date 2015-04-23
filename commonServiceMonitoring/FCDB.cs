@@ -90,9 +90,9 @@ namespace commonServiceMonitoring
                                 MailAddress mailAddress = new MailAddress("IB.Attachment@bankm.com", "Internet Banking Uploaded Attachment");
 
                                 mail.From = mailAddress;
-                                 mail.To.Add("FCDB@bankm.com");
+                                mail.To.Add("FCDB@bankm.com");
                                 // BCC the support service 
-                                 mail.Bcc.Add("support@bankm.com");
+                                mail.Bcc.Add("support@bankm.com");
                                // mail.To.Add("innocent.christopher@bankm.com");
                                 //Mail strings 
 

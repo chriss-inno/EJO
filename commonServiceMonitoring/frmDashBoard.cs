@@ -91,7 +91,8 @@ namespace commonServiceMonitoring
                 DateTime dt = new DateTime();
                 dt = DateTime.Now;
 
-                sourceFolder = "\\\\192.168.110.192\\d$\\BANKM\\Download\\";
+               // sourceFolder = "\\\\192.168.110.192\\d$\\BANKM\\Download\\"; Old link 
+                sourceFolder = "\\\\192.168.150.192\\d$\\BANKM\\Download\\";//This is new address added on 23-APR-2015 as a results of Lighting consequense 
                 destinationFolder = "Z:\\FCDB\\" + dt.Year + "\\" + dt.ToString("MMMM") + "\\" + dt.Day + "\\";
 
                 if (!Directory.Exists(destinationFolder))
@@ -672,7 +673,7 @@ namespace commonServiceMonitoring
                 string logfilename = "AppLogs" + dttm.Year + dttm.ToString("-MM-dd") + ".fcdb";
                 using (StreamWriter w = File.AppendText(logfilename))
                 {
-                    string filelog = dttm.Year + dttm.ToString("-MM-dd hh:mm:ss") + "_ SWIFT Outgoin Service Stopped";
+                    string filelog = dttm.Year + dttm.ToString("-MM-dd hh:mm:ss") + "_ SWIFT Outgoing Service Stopped";
                     w.WriteLine(filelog);
                 }
             }
@@ -1510,9 +1511,9 @@ namespace commonServiceMonitoring
                 //Starting up the FCDB service 
                 DateTime dt = new DateTime();
                 dt = DateTime.Now;
-
-                sourceFolder = "\\\\192.168.110.192\\d$\\BANKM\\Download\\";
-                destinationFolder = "Z:\\FCDB\\" + dt.Year + "\\" + dt.ToString("MMMM") + "\\" + dt.Day + "\\";
+               // sourceFolder = "\\\\192.168.110.192\\d$\\BANKM\\Download\\"; Old link 
+                sourceFolder = "\\\\192.168.150.192\\d$\\BANKM\\Download\\";
+                destinationFolder = "Z:\\FCDBTEST\\" + dt.Year + "\\" + dt.ToString("MMMM") + "\\" + dt.Day + "\\";
 
                 if (!Directory.Exists(destinationFolder))
                 {
@@ -1797,7 +1798,7 @@ catch(Exception ex )
                         string filelog4 = dttm.Year + dttm.ToString("-MM-dd hh:mm:ss") + "_Service Swift non Customer Restarted";
                         w.WriteLine(filelog4);
 
-                        string filelog5 = dttm.Year + dttm.ToString("-MM-dd hh:mm:ss") + "_ SWIFT Outgoin Service Stopped";
+                        string filelog5 = dttm.Year + dttm.ToString("-MM-dd hh:mm:ss") + "_ SWIFT Outgoing Service Stopped";
                         w.WriteLine(filelog5);
 
                         string filelog6 = dttm.Year + dttm.ToString("-MM-dd hh:mm:ss") + "_ SWIFT: Incoming Messages Service Stopped";
@@ -1859,13 +1860,13 @@ catch(Exception ex )
                             string filelog2 = dttm.Year + dttm.ToString("-MM-dd hh:mm:ss") + "_ FCDB CMF Service stopped";
                             w.WriteLine(filelog2);
 
-                            string filelog3 = dttm.Year + dttm.ToString("-MM-dd hh:mm:ss") + "_ Service Stopped";
+                            string filelog3 = dttm.Year + dttm.ToString("-MM-dd hh:mm:ss") + "_FCDBService Stopped";
                             w.WriteLine(filelog3);
 
                             string filelog4 = dttm.Year + dttm.ToString("-MM-dd hh:mm:ss") + "_Service Swift non Customer Restarted";
                             w.WriteLine(filelog4);
 
-                            string filelog5 = dttm.Year + dttm.ToString("-MM-dd hh:mm:ss") + "_ SWIFT Outgoin Service Stopped";
+                            string filelog5 = dttm.Year + dttm.ToString("-MM-dd hh:mm:ss") + "_ SWIFT Outgoing Service Stopped";
                             w.WriteLine(filelog5);
 
                             string filelog6 = dttm.Year + dttm.ToString("-MM-dd hh:mm:ss") + "_ SWIFT: Incoming Messages Service Stopped";
