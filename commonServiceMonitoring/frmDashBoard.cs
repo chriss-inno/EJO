@@ -1513,7 +1513,7 @@ namespace commonServiceMonitoring
                 dt = DateTime.Now;
                // sourceFolder = "\\\\192.168.110.192\\d$\\BANKM\\Download\\"; Old link 
                 sourceFolder = "\\\\192.168.150.192\\d$\\BANKM\\Download\\";
-                destinationFolder = "Z:\\FCDBTEST\\" + dt.Year + "\\" + dt.ToString("MMMM") + "\\" + dt.Day + "\\";
+                destinationFolder = "Z:\\FCDB\\" + dt.Year + "\\" + dt.ToString("MMMM") + "\\" + dt.Day + "\\";
 
                 if (!Directory.Exists(destinationFolder))
                 {

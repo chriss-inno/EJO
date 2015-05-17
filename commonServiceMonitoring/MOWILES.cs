@@ -199,7 +199,7 @@ namespace commonServiceMonitoring
             try
             {
                 OracleCommand cmd = db.CreateCommand();
-                cmd.CommandText = "SELECT IDFCATREF	FROM txnfundstransfer WHERE IDFCATREF IN ( SELECT IDFCATREF FROM admintxnunauthdata WHERE IDFCATREF IN (SELECT IDFCATREF FROM txnfundstransfer WHERE CODSTATUS = 'ABH'))  AND DATSEND >= '24-NOV-2014'";
+                cmd.CommandText = "SELECT IDFCATREF	FROM txnfundstransfer WHERE IDFCATREF IN ( SELECT IDFCATREF FROM admintxnunauthdata WHERE IDFCATREF IN (SELECT IDFCATREF FROM txnfundstransfer WHERE CODSTATUS IN('STH','ABH')))  AND DATSEND >= '05-MAY-2015'";
                 OracleDataReader dr = cmd.ExecuteReader();
                 
                 string uPloadRef = "";
@@ -260,7 +260,7 @@ namespace commonServiceMonitoring
                         mail.Body = mail.Body + "</tr>";
 
                          OracleCommand ocmd = db.CreateCommand();
-                        ocmd.CommandText = "SELECT IDFCATREF, TXTHOSTREF,IDUSERREFERENCE,IDCORPORATE,IDINITIATOR,DATINITIATION,IDAUTHORIZER1,DATAUTHORIZE1,IDSRCACCT,NUMAMOUNT,CODTRNCURR,TXTDESTACCT,TXTBENNAME,TXTBENADDRESS1,TXTBENADDRESS2,TXTPAYMTDETAILS1,       DESTSORTCODE	FROM txnfundstransfer where (IDFCATREF IN ( SELECT IDFCATREF FROM admintxnunauthdata WHERE IDFCATREF IN (SELECT IDFCATREF FROM txnfundstransfer WHERE CODSTATUS = 'ABH'))) and (idfcatref = '" + uPloadRef + "')  AND DATSEND >= '24-NOV-2014'";
+                        ocmd.CommandText = "SELECT IDFCATREF, TXTHOSTREF,IDUSERREFERENCE,IDCORPORATE,IDINITIATOR,DATINITIATION,IDAUTHORIZER1,DATAUTHORIZE1,IDSRCACCT,NUMAMOUNT,CODTRNCURR,TXTDESTACCT,TXTBENNAME,TXTBENADDRESS1,TXTBENADDRESS2,TXTPAYMTDETAILS1,       DESTSORTCODE	FROM txnfundstransfer where (IDFCATREF IN ( SELECT IDFCATREF FROM admintxnunauthdata WHERE IDFCATREF IN (SELECT IDFCATREF FROM txnfundstransfer WHERE CODSTATUS IN ('STH','ABH')))) and (idfcatref = '" + uPloadRef + "')  AND DATSEND >= '05-MAY-2015'";
 
                         OracleDataReader odr = ocmd.ExecuteReader();
 
