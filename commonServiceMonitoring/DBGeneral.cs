@@ -62,7 +62,7 @@ namespace commonServiceMonitoring
         //connect to MSSQL server 
         public SqlConnection MSSQL_connect()
         {
-            SqlConnection conn = conn = new SqlConnection("Data Source=BANKMPORTAL\\SQLEXPRESS;Initial Catalog=STTM_UPLOAD_FILE;Integrated Security=True"); //Change the connections here 
+            SqlConnection conn = conn = new SqlConnection("Data Source=AUTOMAILSRV;Initial Catalog=STTM_UPLOAD_FILE;Integrated Security=True"); //Change the connections here 
 
             try
             {
@@ -106,7 +106,7 @@ namespace commonServiceMonitoring
         //connect to MSSQL server SWIFT  
         public SqlConnection MSSQL_SWIFT_connect()
         {
-            SqlConnection conn = conn = new SqlConnection("Data Source=BANKMPORTAL\\SQLEXPRESS;Initial Catalog=money_mapato;Integrated Security=True"); //Change the connections here 
+            SqlConnection conn = conn = new SqlConnection("Data Source=AUTOMAILSRV;Initial Catalog=money_mapato;Integrated Security=True"); //Change the connections here 
 
             try
             {
@@ -150,7 +150,7 @@ namespace commonServiceMonitoring
         //connect to MSSQL server SWIFT  
         public SqlConnection MSSQL_SWIFT_Out_connect()
         {
-            SqlConnection conn = conn = new SqlConnection("Data Source=BANKMPORTAL\\SQLEXPRESS;Initial Catalog=money_mapato;Integrated Security=True"); //Change the connections here 
+            SqlConnection conn = conn = new SqlConnection("Data Source=AUTOMAILSRV;Initial Catalog=money_mapato;Integrated Security=True"); //Change the connections here 
              
             try
             {
@@ -195,7 +195,7 @@ namespace commonServiceMonitoring
         //connect to MSSQL SWIFT server 
         public SqlConnection MSSQL_opp_connect()
         {
-            SqlConnection conn = conn = new SqlConnection("Data Source=BANKMPORTAL\\QLEXPRESS;Initial Catalog=money_mapato;Integrated Security=True"); //Change the connections here 
+            SqlConnection conn = conn = new SqlConnection("Data Source=AUTOMAILSRV;Initial Catalog=money_mapato;Integrated Security=True"); //Change the connections here 
              
             try
             {
@@ -239,7 +239,7 @@ namespace commonServiceMonitoring
         //connect to MSSQL SWIFT server 
         public SqlConnection MSSQL_MoneyWireles_Success_connect()
         {
-            SqlConnection conn = conn = new SqlConnection("Data Source=BANKMPORTAL\\SQLEXPRESS;Initial Catalog=TXNFUNDSTRANSFER;Integrated Security=True"); //Change the connections here 
+            SqlConnection conn = conn = new SqlConnection("Data Source=AUTOMAILSRV;Initial Catalog=TXNFUNDSTRANSFER;Integrated Security=True"); //Change the connections here 
 
             try 
             {

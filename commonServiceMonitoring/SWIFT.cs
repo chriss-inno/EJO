@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Data.OracleClient;
+using System.Data.SqlClient;
 using System.Net.Mail;
 using System.IO;
 using System.Diagnostics;
@@ -21,8 +22,61 @@ namespace commonServiceMonitoring
 {
     class SWIFT
     {
-        
-//Process incomming swift 
+        DBGeneral dblog;
+        #region Swiftlogs
+        public void writteLogs(string swiftCopy, string category)
+        {
+
+            try
+            {
+                dblog = new DBGeneral();
+                SqlCommand cmd = dblog.MSSQL_SWIFT_connect().CreateCommand();
+
+                string reference_no = "";
+                string file_path = "";
+
+                string sent_at = DateTime.Now.ToString("yyyy-MM-dd HH:mm");
+                string[] arrFile = swiftCopy.Split('_');
+                file_path = swiftCopy;
+
+                reference_no = arrFile[1];
+
+                cmd.CommandText = "INSERT INTO swift_logs(reference_no,file_path,sent_at,category)VALUES('" + reference_no + "','" + file_path + "','" + sent_at + "','" + category + "')";
+                cmd.ExecuteNonQuery();
+
+                //Creating file logs 
+                DateTime dt = new DateTime();
+                dt = DateTime.Now;
+                string logfilename = "SWIFTEmailLogs" + dt.Year + dt.ToString("-MM-dd") + ".fcdb";
+                using (StreamWriter w = File.AppendText(logfilename))
+                {
+                    string filelog = dt.Year + dt.ToString("-MM-dd hh:mm:ss_") + "Swift email Logstored " + file_path;
+                    w.WriteLine(filelog);
+                }
+
+                cmd.Dispose(); //Release all the resources 
+
+
+            }
+            catch (Exception ex)
+            {
+                //Creating file logs 
+                DateTime dt = new DateTime();
+                dt = DateTime.Now;
+                string logfilename = "SWIFTEmailLogsError" + dt.Year + dt.ToString("-MM-dd") + ".fcdb";
+                using (StreamWriter w = File.AppendText(logfilename))
+                {
+                    string filelog = dt.Year + dt.ToString("-MM-dd hh:mm:ss_") + "Swift email Log stored error" + ex.Message.ToString();
+                    w.WriteLine(filelog);
+                }
+
+
+            }
+
+
+        }
+        #endregion
+        //Process incomming swift 
         #region SWIFT incoming
              
             public void processIncomingSwift( string sourceDr, string desinationDr, SqlConnection db )
@@ -114,6 +168,7 @@ namespace commonServiceMonitoring
                                mail.To.Add(email);
                                mail.Bcc.Add(swusers);
                                // mail.Bcc.Add("innocent.christopher@bankm.com");
+                            
                                 mail.From = mailAddress;
                                
                                 mail.Subject = "" + customerdetail + " INCOMING SWIFT COPY";
@@ -127,14 +182,14 @@ namespace commonServiceMonitoring
                                 attachment.Dispose();
 
                                 //Unecessary connection to incomming logs in the future can be removed 
-                                SqlConnection conn = new SqlConnection("Data Source=BANKMPORTAL\\SQLEXPRESS;Initial Catalog=incomingsms;Integrated Security=True");
+                                SqlConnection conn = new SqlConnection("Data Source=AUTOMAILSRV;Initial Catalog=incomingsms;Integrated Security=True");
                                 conn.Open();
                                 SqlCommand cmd4 = conn.CreateCommand();
                                 cmd4.CommandText = "insert into incominglog([customername],[mailsentdate],[mailsenttime],[mailstatus]) values ('" + customerdetail + "','" + DateTime.Now.ToString("dd/MM/yyy") + "','" + DateTime.Now.ToString("hh.mm") + "','NOTSENT')";
                                 cmd4.ExecuteNonQuery();
                                 conn.Close();
 
-
+                                writteLogs(fi.Name, "incomming swift"); //Write to logs 
 
                                 //Creating file logs 
                                 DateTime dtin = new DateTime();
@@ -171,7 +226,6 @@ namespace commonServiceMonitoring
                                 mail.Attachments.Add(attachment);
                                 mail.To.Add(swusers);
                                 //mail.To.Add("innocent.christopher@bankm.com");
-
                                 mail.Bcc.Add("service.delivery@bankm.com");
                                 mail.From = mailAddress;
                                 
@@ -186,7 +240,7 @@ namespace commonServiceMonitoring
 
 
                                 //Unecessary connection to incomming logs in the future can be removed 
-                                SqlConnection conn = new SqlConnection("Data Source=BANKMPORTAL\\SQLEXPRESS;Initial Catalog=incomingsms;Integrated Security=True");
+                                SqlConnection conn = new SqlConnection("Data Source=AUTOMAILSRV;Initial Catalog=incomingsms;Integrated Security=True");
                                 conn.Open();
                                 SqlCommand cmd4 = conn.CreateCommand();
                                 cmd4.CommandText = "insert into incominglog([customername],[mailsentdate],[mailsenttime],[mailstatus]) values ('NILL','" + DateTime.Now.ToString("dd/MM/yyy") + "','" + DateTime.Now.ToString("hh.mm") + "','NOTSENT')";
@@ -202,6 +256,8 @@ namespace commonServiceMonitoring
                                     string filelog = dtin.Year + dtin.ToString("-MM-dd hh:mm:ss_") + "Processed_Failed_processIncomingSwift: " + coppiedFile;
                                     w.WriteLine(filelog);
                                 }
+
+                                writteLogs(fi.Name, "Incomming Swift Failure"); //Write to logs 
                            
                             }
                             dr.Close();
@@ -357,7 +413,7 @@ namespace commonServiceMonitoring
                                
                                
                                 //Unecessary connection to incomming logs in the future can be removed 
-                                SqlConnection conn = new SqlConnection("Data Source=BANKMPORTAL\\SQLEXPRESS;Initial Catalog=outgoingsms;Integrated Security=True");
+                                SqlConnection conn = new SqlConnection("Data Source=AUTOMAILSRV;Initial Catalog=outgoingsms;Integrated Security=True");
                                 conn.Open();
                                 SqlCommand cmd4 = conn.CreateCommand();
                                cmd4.CommandText = "insert into outgoinglog([customername],[mailsentdate],[mailsenttime],[mailstatus]) values ('"+ customerdetail + "','" + DateTime.Now.ToString("dd/MM/yyy") + "','" + DateTime.Now.ToString("hh.mm") + "','SENT')";
@@ -375,6 +431,7 @@ namespace commonServiceMonitoring
                                     string filelog = dt.Year + dt.ToString("-MM-dd hh:mm:ss_") + "Processed_processOutgoingSwift: " + coppiedFile;
                                     w.WriteLine(filelog);
                                 }
+                                writteLogs(fi.Name, "Outgoing Swift"); //Write to logs 
 
                             }
                             else
@@ -574,7 +631,7 @@ namespace commonServiceMonitoring
                                                         w.WriteLine(filelog);
                                                     }
 
-
+                                                    writteLogs(fi.Name, "Outgoing Swift"); //Write to logs 
                                                 }
                                                 else
                                                 {
@@ -593,8 +650,9 @@ namespace commonServiceMonitoring
                                                     mail.From = new MailAddress("service.delivery@bankm.com");
                                                     mail.Attachments.Add(attachment);
                                                     //mail.To.Add("innocent.christopher@bankm.com");
-                                                    mail.To.Add("support@bankm.com");
-                                                    mail.Bcc.Add(userEmails);
+                                                    mail.To.Add("service.delivery@bankm.com");
+                                                    mail.Bcc.Add("support@bankm.com");
+                                                    mail.To.Add(userEmails);
 
 
                                                     mail.Subject = "WRONG MAIL ID DETECTED '" + CustomerEmail + "'";
@@ -615,7 +673,7 @@ namespace commonServiceMonitoring
                                                         w.WriteLine(filelog);
                                                     }
 
-
+                                                    writteLogs(fi.Name, "Outgoing Swift Failure"); //Write to logs 
                                                 }
 
                                             }
@@ -680,7 +738,7 @@ namespace commonServiceMonitoring
                                                     mail.From = new MailAddress("service.delivery@bankm.com");
                                                     mail.Attachments.Add(attachment);
 
-                                                    //mail.To.Add("innocent.christopher@bankm.com");
+                                                   // mail.To.Add("innocent.christopher@bankm.com");
                                                     mail.To.Add(CustomerEmail);
                                                     mail.Bcc.Add(userEmails);
 
@@ -704,6 +762,7 @@ namespace commonServiceMonitoring
                                                         w.WriteLine(filelog);
                                                     }
 
+                                                    writteLogs(fi.Name, "Outgoing Swift"); //Write to logs 
 
                                                 }
                                                 else
@@ -723,7 +782,7 @@ namespace commonServiceMonitoring
 
                                                     mail.From = new MailAddress("service.delivery@bankm.com");
                                                     mail.Attachments.Add(attachment);
-                                                    //mail.To.Add("innocent.christopher@bankm.com");
+                                                   // mail.To.Add("innocent.christopher@bankm.com");
                                                     mail.To.Add("support@bankm.com");
                                                     mail.Bcc.Add(userEmails);
 
@@ -746,7 +805,7 @@ namespace commonServiceMonitoring
                                                         w.WriteLine(filelog);
                                                     }
 
-
+                                                    writteLogs(fi.Name, "Outgoing Swift Failure"); //Write to logs 
                                                 }
 
                                             }
@@ -783,7 +842,7 @@ namespace commonServiceMonitoring
                                                         string filelog = dt.Year + dt.ToString("-MM-dd hh:mm:ss_") + "Processed_processOutgoingSwiftNonCustomer_Failure: " + coppiedFile;
                                                         w.WriteLine(filelog);
                                                     }
-
+                                                    writteLogs(fi.Name, "Outgoing Swift Failure"); //Write to logs 
                                             }
                                         }
                                     }
@@ -866,7 +925,7 @@ namespace commonServiceMonitoring
                                                     string filelog = dt.Year + dt.ToString("-MM-dd hh:mm:ss_") + "Processed_processOutgoingSwiftNonCustomer: " + coppiedFile;
                                                     w.WriteLine(filelog);
                                                 }
-
+                                                writteLogs(fi.Name, "Outgoing Swift"); //Write to logs 
                                                 
                                             }
                                             else
@@ -890,6 +949,7 @@ namespace commonServiceMonitoring
                                                 mail.Attachments.Add(attachment);
 
                                                 mail.To.Add("support@bankm.com");
+                                                mail.Bcc.Add("service.delivery@bankm.com");
                                                 mail.Bcc.Add(userEmails);
                                                 //mail.To.Add("innocent.christopher@bankm.com");
 
@@ -912,7 +972,7 @@ namespace commonServiceMonitoring
                                                     w.WriteLine(filelog);
                                                 }
 
-                                               
+                                                writteLogs(fi.Name, "Outgoing Swift Failure"); //Write to logs 
 
                                             }
                                         }
@@ -988,7 +1048,7 @@ namespace commonServiceMonitoring
 
                                                 mail.To.Add(customerEmail);
                                                 mail.Bcc.Add(userEmails);
-                                               // mail.To.Add("innocent.christopher@bankm.com");
+                                                //mail.To.Add("innocent.christopher@bankm.com");
                                                 subject = (CustomerAddress.Replace("\n", " ").Replace("\n", " ").Replace("\n", " "));
 
                                                 mail.Subject = subject + " SWIFT COPY";
@@ -1009,7 +1069,7 @@ namespace commonServiceMonitoring
                                                     string filelog = dt.Year + dt.ToString("-MM-dd hh:mm:ss_") + "Processed_processOutgoingSwiftNonCustomer: " + coppiedFile;
                                                     w.WriteLine(filelog);
                                                 }
-
+                                                writteLogs(fi.Name, "Outgoing Swift"); //Write to logs 
                                                
                                             }
                                             else
@@ -1052,8 +1112,8 @@ namespace commonServiceMonitoring
                                                     string filelog = dt.Year + dt.ToString("-MM-dd hh:mm:ss_") + "Processed_processOutgoingSwiftNonCustomer: " + coppiedFile;
                                                     w.WriteLine(filelog);
                                                 }
-                                               
 
+                                                writteLogs(fi.Name, "Outgoing Swift Failure"); //Write to logs 
                                             }
 
                                         }
@@ -1126,7 +1186,7 @@ namespace commonServiceMonitoring
 
                                                         mail.To.Add(swusers);
                                                         mail.Bcc.Add("service.delivery@bankm.com");
-                                                        //mail.To.Add("innocent.christopher@bankm.com");
+                                                       // mail.To.Add("innocent.christopher@bankm.com");
 
                                                         mail.Subject = "SWIFT COPY SENDING FAILURE - CUSTOMER ACCOUNT DOES NOT EXIST";
                                                         mail.IsBodyHtml = true;
@@ -1140,7 +1200,7 @@ namespace commonServiceMonitoring
 
                                                         SqlConnection myconnection = new SqlConnection();
                                                         SqlCommand mycommand = new SqlCommand();
-                                                        myconnection = new SqlConnection("Data Source=BANKMPORTAL\\SQLEXPRESS;Initial Catalog=outgoingsms;Integrated Security=True");
+                                                        myconnection = new SqlConnection("Data Source=AUTOMAILSRV;Initial Catalog=outgoingsms;Integrated Security=True");
                                                         myconnection.Open();
                                                         mycommand = new SqlCommand("insert into outgoinglog([customername],[mailsentdate],[mailsenttime],[mailstatus]) values ('NILL','" + dtfr.ToString("dd/MM/yyy") + "','" + dtfr.ToString("hh.mm") + "','NOTSENT')", myconnection);
                                                         mycommand.ExecuteNonQuery();
@@ -1155,7 +1215,7 @@ namespace commonServiceMonitoring
                                                             string filelog = dt.Year + dt.ToString("-MM-dd hh:mm:ss_") + "Processed_Noncustomer_Account_Failed_processOutgoingSwift: " + oldfile;
                                                             w.WriteLine(filelog);
                                                         }
-
+                                                        writteLogs(fi.Name, "Outgoing Swift Failure"); //Write to logs 
                                                         
                                                             }
                                                         }

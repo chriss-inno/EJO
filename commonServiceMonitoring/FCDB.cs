@@ -91,9 +91,9 @@ namespace commonServiceMonitoring
 
                                 mail.From = mailAddress;
                                 mail.To.Add("FCDB@bankm.com");
-                                // BCC the support service 
+                                //BCC the support service 
                                 mail.Bcc.Add("support@bankm.com");
-                               // mail.To.Add("innocent.christopher@bankm.com");
+                              // mail.To.Add("innocent.christopher@bankm.com");
                                 //Mail strings 
 
                                 string subjects = "";
@@ -176,27 +176,29 @@ namespace commonServiceMonitoring
 
 
                                 //Process printing the file
+                               
+                               using (Process P = new Process())
+                               {
+                                   P.StartInfo.FileName = coppiedFile;
+                                   P.StartInfo.Verb = "Print";
+                                   P.Start();
 
-                                using (Process P = new Process())
-                                {
-                                    P.StartInfo.FileName = coppiedFile;
-                                    P.StartInfo.Verb = "Print";
-                                    P.Start();
+                                   //P.WaitForExit()
+                               }
 
-                                    //P.WaitForExit()
-                                }
 
-                                /*
-                                 ProcessStartInfo info = new ProcessStartInfo(coppiedFile);
-                                 info.Verb = "Print";
-                                 info.CreateNoWindow = true;
-                                 info.WindowStyle = ProcessWindowStyle.Hidden;
-                                 Process.Start(info);
+                               /*
+                                * System.Windows.Forms.MessageBox.Show("Printing");
+                               ProcessStartInfo info = new ProcessStartInfo(coppiedFile);
+                               info.Verb = "Print";
+                               info.CreateNoWindow = true;
+                               info.WindowStyle = ProcessWindowStyle.Hidden;
+                               Process.Start(info);
                               
-                                //end printing file 
-                                *  */
+                              //end printing file 
+                              *  */
 
-                                //Creating file logs 
+                               //Creating file logs 
                                 DateTime dt = new DateTime();
                                 dt = DateTime.Now;
                                 string logfilename = "FCDBLogs" + dt.Year + dt.ToString("-MM-dd") + ".fcdb";
@@ -212,7 +214,7 @@ namespace commonServiceMonitoring
                         }
                         else
                         {
-
+                            
                         }
                     }
                     else
@@ -269,7 +271,7 @@ namespace commonServiceMonitoring
             cmd.CommandText = "SELECT C.IDMESG,C.DATMESSAGE,C.FROMID,B.NAMUSER,A.TXTCORPDESC,C.TXTSUBJECT,C.TXTMESSAGE FROM MSTCORPORATE A, MSTCORPUSER B, MAILMESSAGE C WHERE C.FROMID = B.IDUSER AND B.IDCORPORATE = A.IDCORPORATE";
             OracleDataReader dr = cmd.ExecuteReader();
             string msge = "";
-            SqlConnection conDatabase  = new SqlConnection("Data Source=BANKMPORTAL\\SQLEXPRESS;Initial Catalog=mailmessage;Integrated Security=True");
+            SqlConnection conDatabase  = new SqlConnection("Data Source=AUTOMAILSRV;Initial Catalog=mailmessage;Integrated Security=True");
             conDatabase.Open(); //open connections for sql server
 
             string Label1 = "";

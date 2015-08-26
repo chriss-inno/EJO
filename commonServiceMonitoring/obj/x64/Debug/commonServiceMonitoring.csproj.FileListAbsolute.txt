@@ -1,0 +1,22 @@
+C:\Users\Administrator\Desktop\BankApps 05-05-2015\commonServiceMonitoring\bin\x64\Debug\Services Monitoring Panel.exe
+C:\Users\Administrator\Desktop\BankApps 05-05-2015\commonServiceMonitoring\bin\x64\Debug\Services Monitoring Panel.pdb
+C:\Users\Administrator\Desktop\BankApps 05-05-2015\commonServiceMonitoring\bin\x64\Debug\itextsharp.dll
+C:\Users\Administrator\Desktop\BankApps 05-05-2015\commonServiceMonitoring\bin\x64\Debug\Microsoft.CSharp.dll
+C:\Users\Administrator\Desktop\BankApps 05-05-2015\commonServiceMonitoring\bin\x64\Debug\Mysql.Data.dll
+C:\Users\Administrator\Desktop\BankApps 05-05-2015\commonServiceMonitoring\bin\x64\Debug\SautinSoft.PdfFocus.dll
+C:\Users\Administrator\Desktop\BankApps 05-05-2015\commonServiceMonitoring\bin\x64\Debug\System.Data.DataSetExtensions.dll
+C:\Users\Administrator\Desktop\BankApps 05-05-2015\commonServiceMonitoring\bin\x64\Debug\System.Data.dll
+C:\Users\Administrator\Desktop\BankApps 05-05-2015\commonServiceMonitoring\bin\x64\Debug\System.Data.OracleClient.dll
+C:\Users\Administrator\Desktop\BankApps 05-05-2015\commonServiceMonitoring\bin\x64\Debug\System.Deployment.dll
+C:\Users\Administrator\Desktop\BankApps 05-05-2015\commonServiceMonitoring\bin\x64\Debug\System.dll
+C:\Users\Administrator\Desktop\BankApps 05-05-2015\commonServiceMonitoring\bin\x64\Debug\System.Drawing.dll
+C:\Users\Administrator\Desktop\BankApps 05-05-2015\commonServiceMonitoring\bin\x64\Debug\System.Windows.Forms.DataVisualization.dll
+C:\Users\Administrator\Desktop\BankApps 05-05-2015\commonServiceMonitoring\bin\x64\Debug\System.Windows.Forms.dll
+C:\Users\Administrator\Desktop\BankApps 05-05-2015\commonServiceMonitoring\bin\x64\Debug\System.Xml.dll
+C:\Users\Administrator\Desktop\BankApps 05-05-2015\commonServiceMonitoring\bin\x64\Debug\System.Xml.Linq.dll
+C:\Users\Administrator\Desktop\BankApps 05-05-2015\commonServiceMonitoring\obj\x64\Debug\commonServiceMonitoring.frmContainer.resources
+C:\Users\Administrator\Desktop\BankApps 05-05-2015\commonServiceMonitoring\obj\x64\Debug\commonServiceMonitoring.frmDashBoard.resources
+C:\Users\Administrator\Desktop\BankApps 05-05-2015\commonServiceMonitoring\obj\x64\Debug\commonServiceMonitoring.Properties.Resources.resources
+C:\Users\Administrator\Desktop\BankApps 05-05-2015\commonServiceMonitoring\obj\x64\Debug\commonServiceMonitoring.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\BankApps 05-05-2015\commonServiceMonitoring\obj\x64\Debug\Services Monitoring Panel.exe
+C:\Users\Administrator\Desktop\BankApps 05-05-2015\commonServiceMonitoring\obj\x64\Debug\Services Monitoring Panel.pdb

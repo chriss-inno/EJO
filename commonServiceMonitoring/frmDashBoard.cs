@@ -40,7 +40,7 @@ namespace commonServiceMonitoring
 
         
        string dFolderSwift = "C:\\Swift Receipts\\OUTPUT\\2012\\103\\";
-       string sFoldeSwiftr = "\\\\192.168.1.127\\c$\\KENEX\\BANK\\DESTINATION\\PRT\\OUTPUT\\103\\";
+       string sFoldeSwiftr = "\\\\192.168.1.151\\E$\\KENEX\\BANK\\DESTINATION\\PRT\\OUTPUT\\103\\";
         
 
         //Swift outgoing
@@ -50,7 +50,7 @@ namespace commonServiceMonitoring
         SqlConnection dbSwiftOt; //MSQSL SERVER CONNECTION FOR SWIFT 
         System.Timers.Timer timerSWIFTOT = new System.Timers.Timer();  //TIMER FOR SWIFT INNOMMING 
 
-        string sFoldeSwiftrOt="\\\\192.168.1.127\\c$\\KENEX\\BANK\\DESTINATION\\PRT\\INPUT\\103\\";  //The source folder for FCDB Upload
+        string sFoldeSwiftrOt="\\\\192.168.1.151\\E$\\KENEX\\BANK\\DESTINATION\\PRT\\INPUT\\103\\";  //The source folder for FCDB Upload
         string dFolderSwiftOt1="C:\\Swift Receipts\\INPUT\\2012\\103\\"; // The destination folder for SWIFT 
         string dFolderSwiftOt2 = "C:\\Swift Receipts\\A\\"; // The destination folder for SWIFT 
 
@@ -93,7 +93,7 @@ namespace commonServiceMonitoring
 
                // sourceFolder = "\\\\192.168.110.192\\d$\\BANKM\\Download\\"; Old link 
                 sourceFolder = "\\\\192.168.150.192\\d$\\BANKM\\Download\\";//This is new address added on 23-APR-2015 as a results of Lighting consequense 
-                destinationFolder = "Z:\\FCDB\\" + dt.Year + "\\" + dt.ToString("MMMM") + "\\" + dt.Day + "\\";
+                destinationFolder = "\\\\192.168.1.221\\f$\\Data\\FCDB\\" + dt.Year + "\\" + dt.ToString("MMMM") + "\\" + dt.Day + "\\";
 
                 if (!Directory.Exists(destinationFolder))
                 {
@@ -1513,7 +1513,7 @@ namespace commonServiceMonitoring
                 dt = DateTime.Now;
                // sourceFolder = "\\\\192.168.110.192\\d$\\BANKM\\Download\\"; Old link 
                 sourceFolder = "\\\\192.168.150.192\\d$\\BANKM\\Download\\";
-                destinationFolder = "Z:\\FCDB\\" + dt.Year + "\\" + dt.ToString("MMMM") + "\\" + dt.Day + "\\";
+                destinationFolder = "\\\\192.168.1.221\\f$\\Data\\FCDB\\" + dt.Year + "\\" + dt.ToString("MMMM") + "\\" + dt.Day + "\\";
 
                 if (!Directory.Exists(destinationFolder))
                 {

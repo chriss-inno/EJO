@@ -95,9 +95,9 @@
             this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(847, 14);
+            this.label20.Location = new System.Drawing.Point(846, 14);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(111, 23);
+            this.label20.Size = new System.Drawing.Size(112, 23);
             this.label20.TabIndex = 41;
             this.label20.Text = "Stop";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -107,7 +107,7 @@
             this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(744, 14);
+            this.label19.Location = new System.Drawing.Point(743, 14);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(96, 23);
             this.label19.TabIndex = 40;
@@ -119,7 +119,7 @@
             this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(641, 14);
+            this.label18.Location = new System.Drawing.Point(640, 14);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(96, 23);
             this.label18.TabIndex = 39;
@@ -145,7 +145,7 @@
             this.label3.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(65, 14);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(350, 23);
+            this.label3.Size = new System.Drawing.Size(349, 23);
             this.label3.TabIndex = 23;
             this.label3.Text = "Service Name";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -170,10 +170,10 @@
             this.btnS1Stop.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnS1Stop.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnS1Stop.ForeColor = System.Drawing.Color.White;
-            this.btnS1Stop.Location = new System.Drawing.Point(854, 55);
+            this.btnS1Stop.Location = new System.Drawing.Point(853, 55);
             this.btnS1Stop.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.btnS1Stop.Name = "btnS1Stop";
-            this.btnS1Stop.Size = new System.Drawing.Size(97, 41);
+            this.btnS1Stop.Size = new System.Drawing.Size(98, 41);
             this.btnS1Stop.TabIndex = 2;
             this.btnS1Stop.Text = "Stop";
             this.btnS1Stop.UseVisualStyleBackColor = false;
@@ -187,7 +187,7 @@
             this.btnS1Restart.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnS1Restart.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnS1Restart.ForeColor = System.Drawing.Color.White;
-            this.btnS1Restart.Location = new System.Drawing.Point(751, 55);
+            this.btnS1Restart.Location = new System.Drawing.Point(750, 55);
             this.btnS1Restart.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.btnS1Restart.Name = "btnS1Restart";
             this.btnS1Restart.Size = new System.Drawing.Size(82, 41);
@@ -204,10 +204,10 @@
             this.btnS4Stop.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnS4Stop.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnS4Stop.ForeColor = System.Drawing.Color.White;
-            this.btnS4Stop.Location = new System.Drawing.Point(854, 199);
+            this.btnS4Stop.Location = new System.Drawing.Point(853, 199);
             this.btnS4Stop.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.btnS4Stop.Name = "btnS4Stop";
-            this.btnS4Stop.Size = new System.Drawing.Size(97, 41);
+            this.btnS4Stop.Size = new System.Drawing.Size(98, 41);
             this.btnS4Stop.TabIndex = 11;
             this.btnS4Stop.Text = "Stop";
             this.btnS4Stop.UseVisualStyleBackColor = false;
@@ -221,10 +221,10 @@
             this.btnS5Stop.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnS5Stop.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnS5Stop.ForeColor = System.Drawing.Color.White;
-            this.btnS5Stop.Location = new System.Drawing.Point(854, 247);
+            this.btnS5Stop.Location = new System.Drawing.Point(853, 247);
             this.btnS5Stop.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.btnS5Stop.Name = "btnS5Stop";
-            this.btnS5Stop.Size = new System.Drawing.Size(97, 41);
+            this.btnS5Stop.Size = new System.Drawing.Size(98, 41);
             this.btnS5Stop.TabIndex = 14;
             this.btnS5Stop.Text = "Stop";
             this.btnS5Stop.UseVisualStyleBackColor = false;
@@ -238,10 +238,10 @@
             this.btnS6Stop.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnS6Stop.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnS6Stop.ForeColor = System.Drawing.Color.White;
-            this.btnS6Stop.Location = new System.Drawing.Point(854, 295);
+            this.btnS6Stop.Location = new System.Drawing.Point(853, 295);
             this.btnS6Stop.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.btnS6Stop.Name = "btnS6Stop";
-            this.btnS6Stop.Size = new System.Drawing.Size(97, 41);
+            this.btnS6Stop.Size = new System.Drawing.Size(98, 41);
             this.btnS6Stop.TabIndex = 17;
             this.btnS6Stop.Text = "Stop";
             this.btnS6Stop.UseVisualStyleBackColor = false;
@@ -255,10 +255,10 @@
             this.btnS7Stop.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnS7Stop.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnS7Stop.ForeColor = System.Drawing.Color.White;
-            this.btnS7Stop.Location = new System.Drawing.Point(854, 346);
+            this.btnS7Stop.Location = new System.Drawing.Point(853, 346);
             this.btnS7Stop.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.btnS7Stop.Name = "btnS7Stop";
-            this.btnS7Stop.Size = new System.Drawing.Size(97, 41);
+            this.btnS7Stop.Size = new System.Drawing.Size(98, 41);
             this.btnS7Stop.TabIndex = 20;
             this.btnS7Stop.Text = "Stop";
             this.btnS7Stop.UseVisualStyleBackColor = false;
@@ -272,7 +272,7 @@
             this.btnS2Restart.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnS2Restart.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnS2Restart.ForeColor = System.Drawing.Color.White;
-            this.btnS2Restart.Location = new System.Drawing.Point(751, 103);
+            this.btnS2Restart.Location = new System.Drawing.Point(750, 103);
             this.btnS2Restart.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.btnS2Restart.Name = "btnS2Restart";
             this.btnS2Restart.Size = new System.Drawing.Size(82, 41);
@@ -289,7 +289,7 @@
             this.btnS3Restart.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnS3Restart.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnS3Restart.ForeColor = System.Drawing.Color.White;
-            this.btnS3Restart.Location = new System.Drawing.Point(751, 151);
+            this.btnS3Restart.Location = new System.Drawing.Point(750, 151);
             this.btnS3Restart.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.btnS3Restart.Name = "btnS3Restart";
             this.btnS3Restart.Size = new System.Drawing.Size(82, 41);
@@ -306,7 +306,7 @@
             this.btnS6Restart.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnS6Restart.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnS6Restart.ForeColor = System.Drawing.Color.White;
-            this.btnS6Restart.Location = new System.Drawing.Point(751, 295);
+            this.btnS6Restart.Location = new System.Drawing.Point(750, 295);
             this.btnS6Restart.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.btnS6Restart.Name = "btnS6Restart";
             this.btnS6Restart.Size = new System.Drawing.Size(82, 41);
@@ -323,7 +323,7 @@
             this.btnS7Restart.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnS7Restart.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnS7Restart.ForeColor = System.Drawing.Color.White;
-            this.btnS7Restart.Location = new System.Drawing.Point(751, 346);
+            this.btnS7Restart.Location = new System.Drawing.Point(750, 346);
             this.btnS7Restart.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.btnS7Restart.Name = "btnS7Restart";
             this.btnS7Restart.Size = new System.Drawing.Size(82, 41);
@@ -340,7 +340,7 @@
             this.btnS5Restart.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnS5Restart.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnS5Restart.ForeColor = System.Drawing.Color.White;
-            this.btnS5Restart.Location = new System.Drawing.Point(751, 247);
+            this.btnS5Restart.Location = new System.Drawing.Point(750, 247);
             this.btnS5Restart.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.btnS5Restart.Name = "btnS5Restart";
             this.btnS5Restart.Size = new System.Drawing.Size(82, 41);
@@ -366,7 +366,7 @@
             // 
             this.btnStartAll.BackColor = System.Drawing.Color.ForestGreen;
             this.btnStartAll.ForeColor = System.Drawing.Color.White;
-            this.btnStartAll.Location = new System.Drawing.Point(377, 85);
+            this.btnStartAll.Location = new System.Drawing.Point(395, 85);
             this.btnStartAll.Name = "btnStartAll";
             this.btnStartAll.Size = new System.Drawing.Size(221, 50);
             this.btnStartAll.TabIndex = 2;
@@ -408,7 +408,7 @@
             this.btnS1start.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnS1start.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnS1start.ForeColor = System.Drawing.Color.White;
-            this.btnS1start.Location = new System.Drawing.Point(648, 55);
+            this.btnS1start.Location = new System.Drawing.Point(647, 55);
             this.btnS1start.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.btnS1start.Name = "btnS1start";
             this.btnS1start.Size = new System.Drawing.Size(82, 41);
@@ -425,7 +425,7 @@
             this.btnS2start.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnS2start.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnS2start.ForeColor = System.Drawing.Color.White;
-            this.btnS2start.Location = new System.Drawing.Point(648, 103);
+            this.btnS2start.Location = new System.Drawing.Point(647, 103);
             this.btnS2start.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.btnS2start.Name = "btnS2start";
             this.btnS2start.Size = new System.Drawing.Size(82, 41);
@@ -442,7 +442,7 @@
             this.btnS3start.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnS3start.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnS3start.ForeColor = System.Drawing.Color.White;
-            this.btnS3start.Location = new System.Drawing.Point(648, 151);
+            this.btnS3start.Location = new System.Drawing.Point(647, 151);
             this.btnS3start.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.btnS3start.Name = "btnS3start";
             this.btnS3start.Size = new System.Drawing.Size(82, 41);
@@ -459,7 +459,7 @@
             this.btnS4start.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnS4start.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnS4start.ForeColor = System.Drawing.Color.White;
-            this.btnS4start.Location = new System.Drawing.Point(648, 199);
+            this.btnS4start.Location = new System.Drawing.Point(647, 199);
             this.btnS4start.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.btnS4start.Name = "btnS4start";
             this.btnS4start.Size = new System.Drawing.Size(82, 41);
@@ -476,7 +476,7 @@
             this.btnS5start.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnS5start.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnS5start.ForeColor = System.Drawing.Color.White;
-            this.btnS5start.Location = new System.Drawing.Point(648, 247);
+            this.btnS5start.Location = new System.Drawing.Point(647, 247);
             this.btnS5start.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.btnS5start.Name = "btnS5start";
             this.btnS5start.Size = new System.Drawing.Size(82, 41);
@@ -493,7 +493,7 @@
             this.btnS6start.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnS6start.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnS6start.ForeColor = System.Drawing.Color.White;
-            this.btnS6start.Location = new System.Drawing.Point(648, 295);
+            this.btnS6start.Location = new System.Drawing.Point(647, 295);
             this.btnS6start.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.btnS6start.Name = "btnS6start";
             this.btnS6start.Size = new System.Drawing.Size(82, 41);
@@ -510,7 +510,7 @@
             this.btnS7start.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnS7start.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnS7start.ForeColor = System.Drawing.Color.White;
-            this.btnS7start.Location = new System.Drawing.Point(648, 346);
+            this.btnS7start.Location = new System.Drawing.Point(647, 346);
             this.btnS7start.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.btnS7start.Name = "btnS7start";
             this.btnS7start.Size = new System.Drawing.Size(82, 41);
@@ -527,10 +527,10 @@
             this.btnS2Stop.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnS2Stop.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnS2Stop.ForeColor = System.Drawing.Color.White;
-            this.btnS2Stop.Location = new System.Drawing.Point(854, 103);
+            this.btnS2Stop.Location = new System.Drawing.Point(853, 103);
             this.btnS2Stop.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.btnS2Stop.Name = "btnS2Stop";
-            this.btnS2Stop.Size = new System.Drawing.Size(97, 41);
+            this.btnS2Stop.Size = new System.Drawing.Size(98, 41);
             this.btnS2Stop.TabIndex = 5;
             this.btnS2Stop.Text = "Stop";
             this.btnS2Stop.UseVisualStyleBackColor = false;
@@ -544,10 +544,10 @@
             this.btnS3Stop.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnS3Stop.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnS3Stop.ForeColor = System.Drawing.Color.White;
-            this.btnS3Stop.Location = new System.Drawing.Point(854, 151);
+            this.btnS3Stop.Location = new System.Drawing.Point(853, 151);
             this.btnS3Stop.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.btnS3Stop.Name = "btnS3Stop";
-            this.btnS3Stop.Size = new System.Drawing.Size(97, 41);
+            this.btnS3Stop.Size = new System.Drawing.Size(98, 41);
             this.btnS3Stop.TabIndex = 8;
             this.btnS3Stop.Text = "Stop";
             this.btnS3Stop.UseVisualStyleBackColor = false;
@@ -558,7 +558,7 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(422, 14);
+            this.label1.Location = new System.Drawing.Point(421, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(212, 23);
             this.label1.TabIndex = 21;
@@ -659,7 +659,7 @@
             this.label21.Location = new System.Drawing.Point(65, 359);
             this.label21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(350, 16);
+            this.label21.Size = new System.Drawing.Size(349, 16);
             this.label21.TabIndex = 42;
             this.label21.Text = "Money Wireless: Fund Transfer Success  Transaction";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -745,7 +745,7 @@
             this.label11.Location = new System.Drawing.Point(65, 68);
             this.label11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(350, 16);
+            this.label11.Size = new System.Drawing.Size(349, 16);
             this.label11.TabIndex = 31;
             this.label11.Text = "SWIFT: Incoming Messages ";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -758,7 +758,7 @@
             this.label12.Location = new System.Drawing.Point(65, 116);
             this.label12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(350, 16);
+            this.label12.Size = new System.Drawing.Size(349, 16);
             this.label12.TabIndex = 32;
             this.label12.Text = "SWIFT: Outgoing Messages";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -771,7 +771,7 @@
             this.label16.Location = new System.Drawing.Point(65, 308);
             this.label16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(350, 16);
+            this.label16.Size = new System.Drawing.Size(349, 16);
             this.label16.TabIndex = 36;
             this.label16.Text = "Money Wireless: Fund Transfer Failed  Transaction";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -784,7 +784,7 @@
             this.label17.Location = new System.Drawing.Point(65, 164);
             this.label17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(350, 16);
+            this.label17.Size = new System.Drawing.Size(349, 16);
             this.label17.TabIndex = 37;
             this.label17.Text = "SWIFT:Non Customer Outgoing Message ";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -797,7 +797,7 @@
             this.label13.Location = new System.Drawing.Point(65, 212);
             this.label13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(350, 16);
+            this.label13.Size = new System.Drawing.Size(349, 16);
             this.label13.TabIndex = 33;
             this.label13.Text = "FCDB: File Upload";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -810,7 +810,7 @@
             this.label15.Location = new System.Drawing.Point(65, 260);
             this.label15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(350, 16);
+            this.label15.Size = new System.Drawing.Size(349, 16);
             this.label15.TabIndex = 35;
             this.label15.Text = "CMF-FCDB: Customer Requests";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -824,7 +824,7 @@
             this.btnS4Restart.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnS4Restart.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnS4Restart.ForeColor = System.Drawing.Color.White;
-            this.btnS4Restart.Location = new System.Drawing.Point(751, 199);
+            this.btnS4Restart.Location = new System.Drawing.Point(750, 199);
             this.btnS4Restart.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.btnS4Restart.Name = "btnS4Restart";
             this.btnS4Restart.Size = new System.Drawing.Size(82, 41);
@@ -839,7 +839,7 @@
             this.lblS2Display.AutoSize = true;
             this.lblS2Display.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblS2Display.ForeColor = System.Drawing.Color.Red;
-            this.lblS2Display.Location = new System.Drawing.Point(422, 114);
+            this.lblS2Display.Location = new System.Drawing.Point(421, 114);
             this.lblS2Display.Name = "lblS2Display";
             this.lblS2Display.Size = new System.Drawing.Size(212, 19);
             this.lblS2Display.TabIndex = 43;
@@ -852,7 +852,7 @@
             this.lblS3Display.AutoSize = true;
             this.lblS3Display.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblS3Display.ForeColor = System.Drawing.Color.Red;
-            this.lblS3Display.Location = new System.Drawing.Point(422, 162);
+            this.lblS3Display.Location = new System.Drawing.Point(421, 162);
             this.lblS3Display.Name = "lblS3Display";
             this.lblS3Display.Size = new System.Drawing.Size(212, 19);
             this.lblS3Display.TabIndex = 44;
@@ -865,7 +865,7 @@
             this.lblS4Display.AutoSize = true;
             this.lblS4Display.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblS4Display.ForeColor = System.Drawing.Color.Red;
-            this.lblS4Display.Location = new System.Drawing.Point(422, 210);
+            this.lblS4Display.Location = new System.Drawing.Point(421, 210);
             this.lblS4Display.Name = "lblS4Display";
             this.lblS4Display.Size = new System.Drawing.Size(212, 19);
             this.lblS4Display.TabIndex = 45;
@@ -878,7 +878,7 @@
             this.lblS5Display.AutoSize = true;
             this.lblS5Display.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblS5Display.ForeColor = System.Drawing.Color.Red;
-            this.lblS5Display.Location = new System.Drawing.Point(422, 258);
+            this.lblS5Display.Location = new System.Drawing.Point(421, 258);
             this.lblS5Display.Name = "lblS5Display";
             this.lblS5Display.Size = new System.Drawing.Size(212, 19);
             this.lblS5Display.TabIndex = 46;
@@ -892,7 +892,7 @@
             this.lblS6Display.AutoSize = true;
             this.lblS6Display.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblS6Display.ForeColor = System.Drawing.Color.Red;
-            this.lblS6Display.Location = new System.Drawing.Point(422, 306);
+            this.lblS6Display.Location = new System.Drawing.Point(421, 306);
             this.lblS6Display.Name = "lblS6Display";
             this.lblS6Display.Size = new System.Drawing.Size(212, 19);
             this.lblS6Display.TabIndex = 47;
@@ -905,7 +905,7 @@
             this.lblS7Display.AutoSize = true;
             this.lblS7Display.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblS7Display.ForeColor = System.Drawing.Color.Red;
-            this.lblS7Display.Location = new System.Drawing.Point(422, 357);
+            this.lblS7Display.Location = new System.Drawing.Point(421, 357);
             this.lblS7Display.Name = "lblS7Display";
             this.lblS7Display.Size = new System.Drawing.Size(212, 19);
             this.lblS7Display.TabIndex = 48;
@@ -918,7 +918,7 @@
             this.lblS1Display.AutoSize = true;
             this.lblS1Display.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblS1Display.ForeColor = System.Drawing.Color.Red;
-            this.lblS1Display.Location = new System.Drawing.Point(422, 66);
+            this.lblS1Display.Location = new System.Drawing.Point(421, 66);
             this.lblS1Display.Name = "lblS1Display";
             this.lblS1Display.Size = new System.Drawing.Size(212, 19);
             this.lblS1Display.TabIndex = 49;

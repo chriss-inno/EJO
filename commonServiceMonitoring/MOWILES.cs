@@ -46,7 +46,7 @@ namespace commonServiceMonitoring
                     
 
 
-                    SqlConnection mDb= new SqlConnection("Data Source=BANKMPORTAL\\SQLEXPRESS;Initial Catalog=TXNFUNDSTRANSFER;Integrated Security=True");
+                    SqlConnection mDb= new SqlConnection("Data Source=AUTOMAILSRV;Initial Catalog=TXNFUNDSTRANSFER;Integrated Security=True");
                     SqlCommand custCMD =mDb.CreateCommand();
                     mDb.Open();
                     custCMD.CommandText = "select * from TXNFUNDSTRANSFER WHERE IDFCATREF = '" + uPloadRef + "'";
@@ -66,7 +66,7 @@ namespace commonServiceMonitoring
                         SmtpServer.Host = "192.168.150.22";
 
                         mail.From = new MailAddress("Money.Wireless@bankm.com", "Money.Wireless");
-                        //mail.To.Add("innocent.christopher@bankm.com");
+                       // mail.To.Add("innocent.christopher@bankm.com");
                         mail.To.Add("products@bankm.com");
                         mail.Bcc.Add("payments@bankm.com,support@bankm.com");
                         mail.Subject = "Money.Wireless FT Failed Transaction";
@@ -135,7 +135,7 @@ namespace commonServiceMonitoring
 
 
                         //System.Windows.Forms.MessageBox.Show(mail.Body);
-                        SqlConnection myconnection = new SqlConnection("Data Source=BANKMPORTAL\\SQLEXPRESS;Initial Catalog=TXNFUNDSTRANSFER;Integrated Security=True");
+                        SqlConnection myconnection = new SqlConnection("Data Source=AUTOMAILSRV;Initial Catalog=TXNFUNDSTRANSFER;Integrated Security=True");
                         myconnection.Open();
                         SqlCommand mycommand =myconnection.CreateCommand();
                         mycommand.CommandText="insert into TXNFUNDSTRANSFER([IDFCATREF]) values ('" + dr["IDFCATREF"].ToString() + "')";
@@ -207,7 +207,7 @@ namespace commonServiceMonitoring
                 while (dr.Read())
                 {
                     uPloadRef = dr["IDFCATREF"].ToString();
-                    SqlConnection mDb = new SqlConnection("Data Source=BANKMPORTAL\\SQLEXPRESS;Initial Catalog=TXNFUNDSTRANSFER;Integrated Security=True");
+                    SqlConnection mDb = new SqlConnection("Data Source=AUTOMAILSRV;Initial Catalog=TXNFUNDSTRANSFER;Integrated Security=True");
                     mDb.Open();
                     SqlCommand mCmd = mDb.CreateCommand();
 
@@ -297,7 +297,7 @@ namespace commonServiceMonitoring
                         mail.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
                         SmtpServer.Send(mail);
 
-                        SqlConnection cn= new SqlConnection("Data Source=BANKMPORTAL\\SQLEXPRESS;Initial Catalog=TXNFUNDSTRANSFER;Integrated Security=True");
+                        SqlConnection cn= new SqlConnection("Data Source=AUTOMAILSRV;Initial Catalog=TXNFUNDSTRANSFER;Integrated Security=True");
                         SqlCommand ocmd2 = cn.CreateCommand();
                         cn.Open();
                         ocmd2.CommandText = "insert into TXNFUNDSTRANSFER([IDFCATREF]) values ('" + dr["IDFCATREF"].ToString() + "')";
